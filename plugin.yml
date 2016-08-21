@@ -1,1 +1,11 @@
-
+name: JoinEffect
+version: 1
+api: [2.0.0]
+author: YoungRichNigger9
+main: YoungRichNigger9\Main
+description: Allows players to receive an effect when they join the server.
+website: 
+permissions:
+    joineffect.cmd:
+        default: false
+description: "Allow to receive the effect"

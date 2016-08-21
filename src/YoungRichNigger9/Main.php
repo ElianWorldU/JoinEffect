@@ -1,3 +1,4 @@
+<?php
 
 namespace YoungRichNigger9;
 
@@ -9,7 +10,7 @@ use pocketmine\Command\Command;
 use pocketmine\Command\CommandSender;
 use pocketmine\event\player\PlayerJoinEvent;
 use pocketmine\entity\Effect;
-use pocketmine\utils\TextFormat;
+use pocketmine\event\Listener;
 
 class Main extends PluginBase implements Listener {
  public function onEnable(){

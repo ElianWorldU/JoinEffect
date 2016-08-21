@@ -24,4 +24,21 @@ class Main extends PluginBase implements Listener {
   public function onDisable(){
   $this->getLogger()->info("§eJoinEffect §cDisable");
  }
+ public function onJoin(PlayerJoinEvent $event) {
+  $cfg = $this->getConfig();
+	$level = $p->getLevel();
+	if($p->hasPermission("joineffect.cmd")){
+	    $effectid = $cfg->get("Effect-ID");
+	    $duration = $cfg->get("Duration");
+	    $particles = $cfg->get("Particles");
+	    $amplifier = $cfg->get("Amplifier");
+	    $health = $cfg->get("Fill-Player-Health");
+	    $effect = Effect::getEffect($effectid);
+	    $effect->setVisible($particles);
+	    $effect->setAmplifier($amplifier);
+	    $effect->setDuration($duration);
+	    $p->addEffect($effect);
+ }
+ }
+ }
  

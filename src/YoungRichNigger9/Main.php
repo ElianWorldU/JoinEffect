@@ -17,12 +17,12 @@ class Main extends PluginBase implements Listener {
     public function onEnable() {
         $this->getServer()->getPluginManager()->registerEvents($this, $this);
         $this->getLogger()->info("§eJoinEffect §aEnabled!");
-        $cfg = new Config($this->getDataFolder() . "config.yml", Config::YAML, array(
+        $this->cfg = (new Config($this->getDataFolder() . "config.yml", Config::YAML, array(
             "Effect-id" => 1,
             "Effect-Duration" => 2400,
             "Amplifier" => 0,
             "Particles" => true
-        ));
+        )));
     }
 
     public function onLoad() {
@@ -31,14 +31,14 @@ class Main extends PluginBase implements Listener {
 
     public function onDisable() {
         $this->getLogger()->info(TextFormat::YELLOW ."JoinEffect ". TextFormat::RED ."Disabled");
-        $cfg->save();
+        $this->cfg->save();
     }
 
     public function onJoin(PlayerJoinEvent $event) {
-        $id = $cfg->get("Effect-id");
-        $ticks = $cfg->get("Effect-Duration");
-        $amplifier = $cfg->get("Amplifier");
-        $particle = $cfg->get("Particles");
+        $id = $this->cfg->get("Effect-id");
+        $ticks = $this->cfg->get("Effect-Duration");
+        $amplifier = $this>cfg->get("Amplifier");
+        $particle = $this->cfg->get("Particles");
         $player = $event->getPlayer();
         
         $effect = Effect::getEffect($id);

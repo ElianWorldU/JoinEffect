@@ -17,7 +17,7 @@ class Main extends PluginBase implements Listener {
     public function onEnable() {
         $this->getServer()->getPluginManager()->registerEvents($this, $this);
         $this->getLogger()->info("§eJoinEffect §aEnabled!");
-        $this->cfg = (new Config($this->getDataFolder() . "config.yml", Config::YAML, array(
+        $this->cfg = (new Config($this->saveDefaultConfig(); . "config.yml", Config::YAML, array(
             "Effect-id" => 1,
             "Effect-Duration" => 2400,
             "Amplifier" => 0,

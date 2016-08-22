@@ -47,7 +47,7 @@ class Main extends PluginBase implements Listener {
         $effect->setAmplifier($amplifier);
         $effect->setVisible($particle);
         
-        if($player->hasPermission("joineffect.permission")) {
+        if($player->hasPermission("joineffect.cmd")) {
              $player->addEffect($effect);
             $player->sendMessage(TextFormat::YELLOW ."[JoinEffect] ". TextFormat::GREEN ."You recieved Effect!");
          }

@@ -37,7 +37,7 @@ class Main extends PluginBase implements Listener {
     public function onJoin(PlayerJoinEvent $event) {
         $id = $this->cfg->get("Effect-id");
         $ticks = $this->cfg->get("Effect-Duration");
-        $amplifier = $this>cfg->get("Amplifier");
+        $amplifier = $this->cfg->get("Amplifier");
         $particle = $this->cfg->get("Particles");
         $player = $event->getPlayer();
         

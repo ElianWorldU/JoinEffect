@@ -29,13 +29,13 @@
 #Important Note
 
 
-#Effect-ID: ID of the effect
-#Duration in ticks: 1200 = 1 Minute | 20 = 1 second
+#Effect-id: ID of the effect
+#Effect-Duration in ticks: 1200 = 1 Minute | 20 = 1 second
 #Amplifier = Power of the effect
 #Particles: Show particles of the effect--> true / false
 
 
-Effect-ID: 1
-Duration: 2400
+Effect-id: 1
+Effect-Duration: 2400
 Amplifier: 0
 Particles: true

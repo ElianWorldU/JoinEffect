@@ -1,4 +1,4 @@
-# JoinEffect [WIP}
+# JoinEffect [WIP]
 
 # What is JoinEffect?
 
